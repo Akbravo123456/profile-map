@@ -7,7 +7,7 @@ interface MapComponentProps {
   lng: number;
 }
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYXRoYXJ2YS0zMjEiLCJhIjoiY20wZm8ybWt3MGNwZzJucjFjczJkMXJmNCJ9.BZd6u-Gk85vkI5r8w1wxjQ';
+mapboxgl.accessToken = String(import.meta.env.VITE_MAPBOX_ACCESS_TOKEN);
 
 const MapComponent: React.FC<MapComponentProps> = ({ lat, lng }) => {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
